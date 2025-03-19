@@ -1,0 +1,29 @@
+baseURL = "https://example.com/"
+title = "Test"
+theme = "inkblotty"
+author = "Author"
+paginate = 10
+
+languageCode = "ja"
+DefaultContentLanguage = "ja"
+hasCJKLanguage = "true"
+
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+disqusShortname = ""
+googleAnalytics = ""
+
+summaryLength=150
+
+[permalinks]
+  post = "/:slug/"
+  page = "/:slug/"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page =  ["HTML"]
+  section =  ["HTML", "RSS"]
+  taxonomyTerm =  ["HTML", "RSS"]
+  taxonomy =  ["HTML", "RSS"]
+
