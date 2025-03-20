@@ -2,7 +2,7 @@ exports.handler = async (event, context) => {
   return {
     statusCode: 200,
     headers: {
-        "Content-Type": "application/json"  // JSONであることを明示するヘッダーを追加
+        "Content-Type": "application/json"
     },
     body: JSON.stringify({
         "query": "検索クエリ",
