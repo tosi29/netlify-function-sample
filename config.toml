@@ -16,6 +16,11 @@ googleAnalytics = ""
 
 summaryLength=150
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [permalinks]
   post = "/:slug/"
   page = "/:slug/"
