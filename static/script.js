@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
           li.className = 'result-item';
           
           li.innerHTML = `
-            <div class="result-title">${item.title}</div>
+            <div class="result-title"><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.title}</a></div>
             <div class="result-category">${item.category}</div>
             <div class="result-description">${item.description}</div>
           `;

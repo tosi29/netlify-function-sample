@@ -12,17 +12,20 @@ exports.handler = async (event, context) => {
           {
             "title": "検索結果タイトル1",
             "category": "カテゴリ1",
-            "description": "この記事は検索結果の説明文です。"
+            "description": "この記事は検索結果の説明文です。",
+            "url": "https://example.com/result1"
           },
           {
             "title": "検索結果タイトル2",
             "category": "カテゴリ2",
-            "description": "二つ目の検索結果の詳細な説明です。"
+            "description": "二つ目の検索結果の詳細な説明です。",
+            "url": "https://example.com/result2"
           },
           {
             "title": "検索結果タイトル3",
             "category": "カテゴリ3",
-            "description": "三つ目の検索結果に関する情報です。"
+            "description": "三つ目の検索結果に関する情報です。",
+            "url": "https://example.com/result3"
           }
         ]
       })
