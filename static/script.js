@@ -6,12 +6,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultsInfo = document.getElementById('resultsInfo');
   const loading = document.getElementById('loading');
 
+  // エラーメッセージ表示要素
+  let searchErrorDiv = document.getElementById('searchError');
+
+  // エラーメッセージを削除する関数
+  function removeSearchError() {
+    if (searchErrorDiv) {
+      searchErrorDiv.remove();
+      searchErrorDiv = null; // 削除後にnullを代入
+    }
+  }
+
+  // エラーメッセージを表示する関数
+  function displaySearchError(message) {
+    removeSearchError(); // 既存のエラーメッセージを削除
+
+    searchErrorDiv = document.createElement('div');
+    searchErrorDiv.id = 'searchError';
+    searchErrorDiv.className = 'search-error';
+    searchErrorDiv.textContent = message;
+    searchErrorDiv.style.color = 'red';
+
+    const searchContainer = document.querySelector('.search-container');
+    searchContainer.parentNode.insertBefore(searchErrorDiv, searchContainer.nextSibling);
+  }
+
+
   // 検索を実行する関数
   async function performSearch() {
     const query = searchInput.value.trim();
     
+    removeSearchError(); // 検索開始時にエラーメッセージを削除
+
     if (!query) {
-      alert('検索語を入力してください');
+      displaySearchError('検索語を入力してください');
       return;
     }
 
